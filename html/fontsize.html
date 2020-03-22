@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+    <head>
+        <title>
+            Font Size
+        </title>
+    </head>
+    <body>
+        <button id = 'red'> R </button>
+        <button id = 'blue'> B </button>
+        <button id = 'green'> G </button>
+        <button id = 'orange'> O </button>
+        <button id = 'white'> W </button>
+        <p>
+            I am a very wonderful person, at least that's what I think; but I think I'm so terrible at dealing with other people. I really feel sad when someone is not too happy, or angry because of something I did wrong.
+        </p>
+        <p>
+            Sometimes, I feel like I should just stay away from everyone; that they're so much better without Ay and all his drama. I don't actually know what to do. It really hurts sometimes.
+        </p>
+
+        <select>
+            <option value = "xx-large"> xx-large </option>
+            <option value = "x-large"> x-large </option>
+            <option value = "large"> large </option>
+            <option value = "initial"> initial </option>
+            <option value = "small"> small </option>
+            <option value = "x-small"> x-small </option>
+            <option value = "xx-small"> xx-small </option>
+        </select>
+
+        <script>
+            
+            let body = document.querySelector('body');
+            document.querySelector('select').onchange = function () {body.style.fontSize = this.value;
+                
+            }
+            document.querySelector('#red').onclick = function () {body.style.backgroundColor = 'red';
+                
+            }
+            document.querySelector('#blue').onclick = function () {body.style.backgroundColor = 'blue';
+                
+            }
+            document.querySelector('#green').onclick = function () {body.style.backgroundColor = 'green';
+                
+            }
+            document.querySelector('#orange').onclick = function () {body.style.backgroundColor = 'orange';
+                
+            }
+            document.querySelector('#white').onclick = function () {body.style.backgroundColor = 'white';
+                
+            }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/contact.css">
+    <title>Contact redirect</title>
+</head>
+<body>
+    <%- include ("partials/nav.ejs") %>
+    <p>You have successfully requested for the contact of <%=contact.name%> from the <%=contact.dept%> department</p>
+    <p>The data has been sent to your email address: <%=contact.email%></p>
+</body>
+</html>

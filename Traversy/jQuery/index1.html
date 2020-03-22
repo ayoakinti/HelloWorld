@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <style>
+        body{
+            background: paleturquoise;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 17px;
+            line-height: 1.5em;
+        }
+        header{
+            background: black;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 10px;
+            border-bottom: 4px white solid;
+        }
+        #container{
+            background: rgb(161, 157, 143);
+            padding: 10px;
+            width: 90%;
+            margin: auto;
+        }
+    </style>
+    <title>jQuery: Selectors</title>
+</head>
+<body>
+    <header>
+        <h1>jQuery: Selectors</h1>
+    </header>
+    <div id="container">
+        <h1 id="heading1">Heading One</h1>
+        <p id="para1">Lorenn skjdkjs sjhkkajskj audhskjhdskjhds jshdkahhuihasdhe Ayomide Akintimehin Olawale Adeola Orekoya Solomon Abraham Gbemisola Alli <span>Esther Rona</span> Jessica Godwin Lauren Ediete Jane Omoze Egbaran Benjamin Okafor</p>
+
+        <h1 class="heading2">Heading Two</h1>
+        <p class="para2">Lorenn skjdkjs sjhkkajskj audhskjhdskjhds jshdkahhuihasdhe Ayomide Akintimehin Olawale Adeola Orekoya Solomon Abraham Gbemisola Alli <span>Esther Rona</span> Jessica Godwin Lauren Ediete Jane Omoze Egbaran Benjamin Okafor</p>
+
+        <ul class="List">
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+        </ul>
+        
+        <input type="button" value="Button 1">
+        <input type="submit" value="Submit">
+        <input type="text">
+
+        <a href="http://google.com">Google</a>
+        <a href="http://yahoo.com">Yahoo</a>
+    </div>
+    
+    <div style="padding:200px"></div>
+
+    <script>
+        $(document).ready(() => {
+            // $("h1#heading1").hide();
+            // $(".para2").hide();
+            $(".para2 span").css("color", "red");
+            $("ul.List li:first").css("color", "pink");
+            $("ul.List li:last").css("color", "yellow");
+            $("ul.List li:even").css("background-color", "blue");
+            $("ul.List li:odd").css("background-color", "violet");
+            $("ul.List li:nth-child(3n)").css("list-style", "none");
+            // $(":button").hide();
+            $("[href='http://google.com']").css("color", "black");
+            $("a[href='http://yahoo.com']").css("color", "green");
+            // $("*").css("background-color", "yellow");
+            // $("#container").css("background-color", "blue");
+            });
+    </script>
+</body>
+</html>

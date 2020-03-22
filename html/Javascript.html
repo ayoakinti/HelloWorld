@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+    <head>
+
+        <title>
+            Javascript
+        </title>
+    </head>
+    <body>
+        <form>
+
+            <input autofocus = "on" id= "name" type = "text" value="Ayomide Olawale">
+            <input class="button" type = "submit">
+        </form>
+        <script>
+
+            // function greet() 
+            // {
+            //     let name = document.querySelector('#name').value;
+            //     alert('hello, ' + name);    
+            // }
+
+            const name = document.querySelector('#name').value;
+            const button = document.querySelector(".button");
+            button.addEventListener("mouseout", (e) => {
+                e.preventDefault();
+                alert("Hello! " + name);
+            })
+        </script>
+    </body>
+</html>
+
+<!-- onsubmit="greet(); return false;" -->

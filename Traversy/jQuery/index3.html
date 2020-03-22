@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <style>
+        body{
+            background: paleturquoise;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 17px;
+            line-height: 1.5em;
+        }
+        header{
+            background: black;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 10px;
+            border-bottom: 4px white solid;
+        }
+        #container{
+            background: rgb(161, 157, 143);
+            padding: 10px;
+            width: 90%;
+            margin: auto;
+        }
+        .myClass{
+            color: brown;
+            background: green;
+        }
+    </style>
+    <title>jQuery: DOM Manipulation</title>
+</head>
+<body>
+    <header>
+        <h1>jQuery: DOM Manipulation</h1>
+    </header>
+    <div id="container">    
+        <button id="btn1">Button 1</button>
+        <p class="para1">This is the first paragraph</p>
+        <p class="para2">This is the second paragraph</p>
+        <div id="myDiv"></div>
+        <input type="text" class="newItem">
+        <ul class="list">
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+        </ul>
+        <a href="http://google.com">Google</a>
+        <ol class="users"></ol>
+    </div>
+    
+    <div style="padding:200px"></div>
+
+    <script>
+        $(document).ready(() => {
+            $(".para1").css({color: "red", background: "black"});
+            $(".para2").addClass("myClass");
+            $(".para2").removeClass("myClass");
+            $("#btn1").click(() => {
+                $(".para2").toggleClass("myClass");
+            });
+            $("#myDiv").html("<h3>Hello World</h3>");
+            $(".list").append("<li>Appended</li>")
+            $(".list").prepend("<li>Prepended</li>")
+            $(".list").before("<h4>Hello</h4>")
+            $(".list").after("<h4>World</h4>")
+            // $(".para2").appendTo(".para1");
+            // $(".list").empty();
+            // $(".list").detach();
+            $("a").attr("target", "blank");
+            // alert($("a").attr("href"));
+            // $("a").removeAttr("target");
+            // $("p").wrap("<h2>");
+            // $("p").wrapAll("<h2>");
+            
+            $(".newItem").keydown((e) => {
+                var code = e.which;
+                if(code == 13){
+                    e.preventDefault();
+                       $("ul").append(`<li>${e.target.value}</li>`);
+                }
+            }); 
+
+            var myArray = ["Ayomide", "Olawale", "Akintimehin", "Crank"];
+            $.each(myArray, (i, val) => {
+                // console.log(val);
+                $(".users").append(`<li>${val}</li>`);
+            });
+
+            // var newArray = $("ul.list li").toArray();
+            // console.log(newArray);
+            // newArray.forEach((item) => {
+            //     console.log(item);
+            // });
+            // $.each(newArray, (i, val) => {
+            //     console.log(val.innerText);
+            // });
+        });
+    </script>
+</body>
+</html>

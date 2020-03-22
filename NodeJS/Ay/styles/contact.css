@@ -1,0 +1,43 @@
+body
+{
+    background-color: burlywood;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 30px;
+    color: green;
+    margin: 10px;
+    text-align: center
+}
+h1{
+    text-transform: uppercase; 
+    font-size: 50px; 
+    letter-spacing: 2px;
+}
+p{
+    font-size: 40px; 
+    margin-bottom: 40px;
+    margin-top: 10px;
+}
+ul{
+    text-align: justify;
+}
+#container{
+    background: paleturquoise;
+    padding: 30px;
+    width: 50%;
+    margin: auto;
+}
+#form label{
+    display: block;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 5px;
+    float: left;
+}
+#form input[type= "text"], [type="email"], [type="dept"]{
+    width: 100%;
+}
+#form input[type="submit"]{
+    color: chocolate;
+    width: auto;
+    margin: 2px;
+    border-radius: 5px;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<!-- Demonstrates programmatic changes to style-->
+
+<html lang = "en">
+    <head>
+        <title>
+            Background Colours
+        </title>
+    </head>
+    <body>
+        <button id = "red"> R </button>
+        <button id = "green"> G </button>
+        <button id = "blue"> B </button>
+
+        <script>
+        
+            let body = document.querySelector('body');
+            // document.querySelector('#red').onclick = function () {body.style.backgroundColor = 'red';
+            
+            // }
+            const red = document.querySelector('#red');
+            red.addEventListener("click", (e) => {
+                body.style.background = "red";
+            })
+
+            document.querySelector('#green').onclick = function () {body.style.backgroundColor = 'green';
+            
+            }   
+
+            document.querySelector('#blue').onclick = function () {body.style.backgroundColor = 'blue';               
+                
+            }
+
+        </script>
+    </body>
+</html>

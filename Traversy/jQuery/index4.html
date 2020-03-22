@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <style>
+        body{
+            background: paleturquoise;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 17px;
+            line-height: 1.5em;
+        }
+        header{
+            background: black;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 10px;
+            border-bottom: 4px white solid;
+        }
+        #container{
+            background: rgb(161, 157, 143);
+            padding: 10px;
+            width: 90%;
+            margin: auto;
+        }
+        .box{
+            background: indianred;
+            color: indigo;
+            width: 400px;
+            height: 200px;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+    <title>jQuery: Effects and Animation</title>
+</head>
+<body>
+    <header>
+        <h1>jQuery: Effects and Animation</h1>
+    </header>
+    <div id="container">
+        <button class="btnFadeOut">Fade Out</button>
+        <button class="btnFadeIn">Fade In</button>
+        <button class="btnFadeToggle">Fade Toggle</button>
+        <hr>
+
+        <div class="box"><h1>Hello World</h1></div>
+    </div>
+    
+    <div style="padding:200px"></div>
+
+    <script>
+        $(document).ready(() => {
+
+        });
+    </script>
+</body>
+</html>

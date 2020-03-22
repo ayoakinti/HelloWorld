@@ -1,0 +1,23 @@
+{
+  "name": "ay",
+  "version": "1.0.0",
+  "description": "my first app with nodeJS",
+  "main": "Global_objects.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "first",
+    "app",
+    "fun"
+  ],
+  "author": "me",
+  "license": "ISC"
+}

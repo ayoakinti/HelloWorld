@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{background: aliceblue; padding: 2px; font-family: Georgia, 'Times New Roman', Times, serif;}
+        li{list-style: none; }
+        h1{font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
+    </style>
+    <title>Profile for EJS</title>
+</head>
+<body>
+    <%- include ("partials/nav.ejs") %>
+    <h1> This is the profile of <%=name%></h1>
+    <hr>
+    <p>He is <strong><%=data.age%></strong> years old</p>
+    <p>He is a <strong><%=data.job%></strong></p>
+    <hr>
+    <p>Hobbies:</p>
+    <ul>
+        <% data.hobbies.forEach(hobby => { %>
+            <li> <%= hobby %></li>
+        <% }); %>
+    </ul>
+</body>
+</html>
+

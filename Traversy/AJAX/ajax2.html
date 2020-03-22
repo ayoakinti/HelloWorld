@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ajax 2 - Local JSON</title>
+</head>
+<body>
+    <button id="button1">Get User </button>
+    <br><hr>
+    <button id="button2">Get Users </button>
+    <br>
+    <h1>User</h1>
+    <div id="user"></div>
+    <hr>
+    <h1>Users</h1>
+    <div id="users"></div>
+
+    <script>
+        document.getElementById("button1").addEventListener("click", loadUser);
+        document.getElementById("button2").addEventListener("click", loadUsers);
+        
+
+        function loadUsers(){
+            // Initiate XMLHTTPREQUEST
+            var xhr2 = new XMLHttpRequest();
+            // Open JSON file
+            xhr2.open("GET", "users.json", true)
+            
+            // Load the file
+            xhr2.onload = function () {
+                if(this.status == 200){
+                    // console.log("It opened!!!")
+                    const output = JSON.parse(this.responseText);
+                    var show = "";
+                    console.log(this.responseText);
+                    output.forEach(element => {
+                             console.log(element.id, element.name, element.email )                            
+                        })
+                    document.getElementById("users").innerHTML += 
+                    "<table>" +
+                        "<thead>" +
+                            "<th> ID </th>" +
+                            "<th> Name </th>" +
+                            "<th> Email </th>" +
+                        "</thead>" +
+                    "</table>" 
+                    show += "<table>"
+                    for(var i in output){
+                        show += "<tbody>" +
+                            "<td>" + output[i].id + "</td>" +
+                            "<td>" + output[i].name + "</td>" +
+                            "<td>" + output[i].email + "</td>" +
+                        "</tbody>" 
+                    }    
+                    show += "</table>"   
+                    document.getElementById("users").innerHTML += show;                    
+                    // "<table>"   +                                
+                    //     "<tbody>" +
+                    //         "<td>" + output[0].id + "</td>" +
+                    //         "<td>" + output[0].name + "</td>" +
+                    //         "<td>" + output[0].email + "</td>" +
+                    //     "</tbody>" +
+                    //     "<tbody>" +
+                    //         "<td>" + output[1].id + "</td>" +
+                    //         "<td>" + output[1].name + "</td>" +
+                    //         "<td>" + output[1].email + "</td>" +
+                    //     "</tbody>" +
+                    //     "<tbody>" +
+                    //         "<td>" + output[2].id + "</td>" +
+                    //         "<td>" + output[2].name + "</td>" +
+                    //         "<td>" + output[2].email + "</td>" +
+                    //     "</tbody>" +
+                    // "</table>"
+                } else {
+                    console.log("It isn't opening")
+                }
+            }
+            xhr2.onerror = function(){
+                console.log("Error...")
+            }
+
+            xhr2.send();
+        } 
+
+        function loadUser(){
+            // Initiate XMLHTTPREQUEST
+            var xhr1 = new XMLHttpRequest();
+            // Open JSON file
+            xhr1.open("GET", "user.json", true)
+            
+            // Load the file
+            xhr1.onload = function () {
+                if(this.status == 200){
+                    // console.log("It opened!!!")
+                    const output = JSON.parse(this.responseText);
+                    console.log(this.responseText);
+                    document.getElementById("user").innerHTML += "<ul>" +
+                        "<li> ID: " + output.id + "</li>" +
+                        "<li> Name: " + output.name + "</li>" +
+                        "<li> Email: " + output.email + "</li>" +
+                        "</ul>"
+                } else {
+                    console.log("It isn't opening")
+                }
+            }
+            xhr1.onerror = function(){
+                console.log("Error...")
+            }
+
+            xhr1.send();
+        } 
+    
+    </script>
+</body>
+</html>

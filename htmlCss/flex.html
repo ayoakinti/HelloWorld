@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+    <style>
+        @media (min-width: 760px) {
+            #container {
+                display: flex;
+                /* align-items: flex-end;
+                align-items: flex-start; 
+                align-items: center;
+                flex-direction: column;*/
+            }
+
+            #container-2 {
+                display: flex;
+                /* justify-content: flex-end; 
+                justify-content: space-between;*/
+                justify-content: space-around;
+            }
+        }
+
+        #container-3{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        #container div, #container-2 div, #container-3 div {
+            border: 1px #ccc solid;
+            padding: 10px;
+        }
+
+        #box-one {
+            flex: 2;
+            order: 2;
+        }
+
+        #box-two {
+            flex: 1;
+            order: 1;
+        }
+
+        #box-three {
+            flex: 1;
+            order: 3;
+        }  
+
+        #box-four {
+            flex-basis: 27%;
+        }
+
+        #box-five {
+            flex-basis: 15%;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="box-one">
+            <h3>Box One</h2>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nisi itaque necessitatibus eaque voluptate recusandae expedita vero, id, aperiam sed hic voluptas. Ad eligendi quis ipsum facilis sint repudiandae assumenda.</p>
+        </div>
+        <div id="box-two">
+            <h3>Box Two</h2>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nisi itaque necessitatibus eaque voluptate recusandae expedita vero, id, aperiam sed hic voluptas. Ad eligendi quis ipsum facilis sint repudiandae assumenda.</p>
+        </div>
+        <div id="box-three">
+            <h3>Box Three</h2>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nisi itaque necessitatibus eaque voluptate recusandae expedita vero, id, aperiam sed hic voluptas. Ad eligendi quis ipsum facilis sint repudiandae assumenda.</p>
+        </div>
+    </div>
+    <div id="container-2">
+        <div id="box-four">
+            <h3>Box Four</h2>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nisi itaque necessitatibus eaque voluptate recusandae expedita vero, id, aperiam sed hic voluptas. Ad eligendi quis ipsum facilis sint repudiandae assumenda. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, ut magnam maiores a esse hic nulla! Odit tempore debitis a harum dolore. Sint quia deleniti repellendus. Nesciunt totam atque nihil?</p>
+        </div>
+        <div id="box-four">
+            <h3>Box Five</h2>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nisi itaque necessitatibus eaque voluptate recusandae expedita vero, id, aperiam sed hic voluptas. Ad eligendi quis ipsum facilis sint repudiandae assumenda. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis, omnis? Facilis praesentium dignissimos explicabo. Voluptates exercitationem error in eveniet labore reprehenderit deserunt quisquam sint ipsam deleniti perferendis voluptate, accusantium nostrum.</p>
+        </div>
+        <div id="box-four">
+            <h3>Box Six</h2>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nisi itaque necessitatibus eaque voluptate recusandae expedita vero, id, aperiam sed hic voluptas. Ad eligendi quis ipsum facilis sint repudiandae assumenda. Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt reprehenderit totam, dolore, voluptatibus hic optio quaerat exercitationem illo porro aut ratione id tempore facere? Odit omnis dolorem amet consequuntur pariatur.</p>
+        </div>
+    </div>
+    <div id="container-3">
+        <div id="box-five">
+            <h3>Box Seven</h2>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nisi itaque necessitatibus eaque voluptate recusandae expedita vero, id, aperiam sed hic voluptas. Ad eligendi quis ipsum facilis sint repudiandae assumenda.</p>
+        </div>
+        <div id="box-five">
+            <h3>Box Eight</h2>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nisi itaque necessitatibus eaque voluptate recusandae expedita vero, id, aperiam sed hic voluptas. Ad eligendi quis ipsum facilis sint repudiandae assumenda.</p>
+        </div>
+        <div id="box-five">
+            <h3>Box Nine</h2>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nisi itaque necessitatibus eaque voluptate recusandae expedita vero, id, aperiam sed hic voluptas. Ad eligendi quis ipsum facilis sint repudiandae assumenda.</p>
+        </div>
+        <div id="box-five">
+            <h3>Box Ten</h2>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nisi itaque necessitatibus eaque voluptate recusandae expedita vero, id, aperiam sed hic voluptas. Ad eligendi quis ipsum facilis sint repudiandae assumenda.</p>
+        </div>
+        <div id="box-five">
+            <h3>Box Eleven</h2>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nisi itaque necessitatibus eaque voluptate recusandae expedita vero, id, aperiam sed hic voluptas. Ad eligendi quis ipsum facilis sint repudiandae assumenda.</p>
+        </div>
+        <div id="box-five">
+            <h3>Box Twelve</h2>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nisi itaque necessitatibus eaque voluptate recusandae expedita vero, id, aperiam sed hic voluptas. Ad eligendi quis ipsum facilis sint repudiandae assumenda.</p>
+        </div>
+    </div>
+</body>
+</html>

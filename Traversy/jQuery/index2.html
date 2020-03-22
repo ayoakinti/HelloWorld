@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <style>
+        body{
+            background: paleturquoise;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 17px;
+            line-height: 1.5em;
+        }
+        header{
+            background: black;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 10px;
+            border-bottom: 4px white solid;
+        }
+        #container{
+            background: rgb(161, 157, 143);
+            padding: 10px;
+            width: 90%;
+            margin: auto;
+            text-align: justify;
+        }
+    </style>
+    <title>jQuery: Events</title>
+</head>
+<body>
+    <header>
+        <h1>jQuery: Events</h1>
+    </header>
+
+    <div id="container">
+        <h3>Mouse Events</h3>
+        <button class="btn1">Button 1</button>
+        <button class="btn2">Button 2</button>
+        <p class="para1">The first step of the process is filling out a written application. To help you write the best application possible, you can read about what we look for in Recursers. If you are eligible for a grant and need financial assistance to attend, you can request one on your application. We don’t consider whether or not you requested a grant when we make admissions decisions.</p>
+
+        <p class="para2">Co-ordinates</p>
+        <div class="cords">
+
+        </div>
+        <hr>
+        <form class="form">
+            <label for="name">Name</label><br>
+            <input type="text" name="name" id="name"><br>
+            <label for="mail">Email</label><br>
+            <input type="email" name="mail" id="mail"><br>
+            <label for="gender">Gender</label><br>
+            <select name="gender" class="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select><br>
+            <input type="submit" value="Submit" id="submit">
+        </form>
+    </div>
+
+    <div style="padding: 200px;"></div>
+    <script>
+        $(document).ready(() => {
+            // $(".btn1").click(() => {
+            // alert("Shit's fucking working!!!");
+            // }); 
+            
+            // $(".btn1").on("click", () => {
+            // alert("Shit's fucking working!!!");
+            // }); 
+
+            // $(".btn1").click(() => {
+            //     // $(".para1").hide();
+            //     $(".para1").toggle();
+            // }); 
+
+            // $(".btn2").click(() => {
+            //     $(".para1").show();
+            // }); 
+
+            // $(".btn2").on("dblclick", () => {
+            //     $(".para1").toggle();
+            // }); 
+            
+            // $(".btn1").hover(() => {
+            //     $(".para1").toggle();
+            // });
+
+            // $(".btn2").on("mouseenter", () => {
+            //     $(".para1").toggle();
+            // });  
+
+            // $(".btn2").on("mouseleave", () => {
+            //     $(".para1").toggle();
+            // });
+
+            // $(".btn2").on("mousedown", () => {
+            //     $(".para1").toggle();
+            // });  
+
+            // $(".btn2").on("mouseup", () => {
+            //     $(".para1").toggle();
+            // });  
+
+            // $(".btn1").click((e) => {
+            //     console.log(e);
+            //     alert(`The class name is ${e.currentTarget.className}`);
+            // }); 
+
+            // $(".btn1").on("mousemove", (e) => {
+            //     // console.log(e);
+            //     console.log(`Cord X: ${e.clientX}, Cord Y: ${e.clientY}`);
+            // });
+
+            // $(document).on("mousemove", (e) => {
+            //     // console.log(e);
+            //     // console.log(`Cord X: ${e.clientX}, Cord Y: ${e.clientY}`);
+            //     var output = `<table>
+            //                     <thead>
+            //                         <th> Cord X </th>
+            //                         <th> Cord Y </th>
+            //                     </thead>
+            //                     <tbody>
+            //                         <td> ${e.clientX} </td>
+            //                         <td> ${e.clientY} </td>
+            //                     </tbody>
+            //                 </table>`;
+            //         $(".cords").html(output);
+            // });
+
+            // $("input#name").focus(() => {
+            //     $("input#name").css("background", "pink");
+            // });
+
+            // $("input#name").blur(() => {
+            //     $("input#name").css("background", "white");
+            // });
+
+            // $("input#name").keyup((e) => {
+            //     console.log(e.target.value);
+            // });
+
+            // $("select.gender").change(() => {
+            //     alert("gender changed");
+            // });
+
+            // $(".form").submit((e) => {
+            //     e.preventDefault();
+            //     var name = $("input#name").val();
+            //     console.log(name);
+            // });
+        });
+    </script>
+</body>
+</html>
